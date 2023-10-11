@@ -1,6 +1,6 @@
 # Revisiting Token Dropping Strategy in Efficient BERT Pretraining
 
-This repository contains the code for our paper submitted to ACL2023.
+This repository contains the code for our paper accepted by [ACL2023](https://aclanthology.org/2023.acl-long.579/).
 
 ## Requirements and Installation
 
@@ -18,6 +18,8 @@ pip install --editable ./
 # on MacOS:
 # CFLAGS="-stdlib=libc++" pip install --editable ./
 ```
+
+Note that the different version of fairseq would cause some issues, and we recommend to use this [version](https://github.com/facebookresearch/fairseq/tree/2fd9d8a972794ba919174baf0d1828a5a4c626f3) for stable training.
 
 # Getting Started
 Here, we introduce how to perform our **ScTD** strategy.
@@ -81,4 +83,15 @@ fairseq-train $DATA_DIR \
 You can evaluate the pretrained models by using the original [fine-tuning scripts](https://github.com/facebookresearch/fairseq/tree/main/examples/roberta), or any way you like.
 
 
+## Citation
+If you find this work helpful, please consider citing as follows:  
+
+```ruby
+@inproceedings{zhong-etal-2023-revisiting,
+    title = "Revisiting Token Dropping Strategy in Efficient {BERT} Pretraining",
+    author = "Zhong, Qihuang  and Ding, Liang  and Liu, Juhua  and Liu, Xuebo  and Zhang, Min  and Du, Bo  and Tao, Dacheng",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    year = "2023",
+}
+```
 
